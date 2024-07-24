@@ -38,7 +38,8 @@ Dataset harga rumah jaksel terdiri dari 7 kolom dengan jumlah data yaitu 1000 da
  - JKM : jumlah kamar mandi.
  - GRS : ada/tidak ada
  - KOTA : nama kota.
- source (https://www.kaggle.com/datasets/wisnuanggara/daftar-harga-rumah)
+
+source (https://www.kaggle.com/datasets/wisnuanggara/daftar-harga-rumah)
  
 ## EDA :
 ![Screenshot 2024-07-25 025517](https://github.com/user-attachments/assets/1b093581-cca6-4717-8e30-866401c203bd)
