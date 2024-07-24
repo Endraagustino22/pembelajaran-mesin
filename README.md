@@ -3,6 +3,8 @@ nama : ENDRA AGUSTINO
 nim  : A11.2022.14614
 kelompok : A11.4412
 
+file projek prediksi harga rumah ada di folder /prediksi harga rumah di jaksel
+
 ## ringkasan : 
 project prediksiHargaRumah ini bertujuan untuk memprediksi Harga rumah di jaksel berdasarkan dataset yang di ambil dari kagle menggunakan supervised learning yaitu model XGBRegressor, karena belum ada yang mencoba menggunakan model tersebut di kagglenya. Dataset yang digunakan mencakup fitur-fitur seperti luas tanah, luas bangunan, jumlah kamar tidur, jumlah kamar mandi, dan keberadaan garasi.
 
