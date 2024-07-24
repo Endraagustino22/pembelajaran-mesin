@@ -2,14 +2,25 @@
 praktikum pembelajaran mesin
 
 ## ringkasan : 
-project prediksiHargaRumah ini bertujuan untuk memprediksi Harga rumah di jaksel berdasarkan dataset yang di ambil dari kagle menggunakan supervised learning yaitu model XGBRegressor, karena belum ada yang menggunakan model tersebut di kaggle tersebut.
+project prediksiHargaRumah ini bertujuan untuk memprediksi Harga rumah di jaksel berdasarkan dataset yang di ambil dari kagle menggunakan supervised learning yaitu model XGBRegressor, karena belum ada yang mencoba menggunakan model tersebut di kagglenya. Dataset yang digunakan mencakup fitur-fitur seperti luas tanah, luas bangunan, jumlah kamar tidur, jumlah kamar mandi, dan keberadaan garasi.
+
+Data awal telah diproses dengan menghapus nilai yang tidak perlu, normalisasi harga, dan mengonversi fitur kategorikal.
+Setelah pemisahan data menjadi set pelatihan dan pengujian, model XGBRegressor awalnya menunjukkan hasil pelatihan yang baik tetapi mengalami overfitting, dengan skor pelatihan 0.9975 dan skor pengujian 0.3741. Untuk mengatasi masalah ini, dilakukan tuning hyperparameter menggunakan RandomizedSearchCV, dengan hasil parameter terbaik yang menunjukkan perbaikan dalam model. Meskipun ada peningkatan, model masih memerlukan evaluasi tambahan dan kemungkinan feature engineering untuk meningkatkan akurasi prediksi. Langkah selanjutnya melibatkan evaluasi lebih lanjut menggunakan metrik tambahan dan pengujian dengan data terbaru.
+
+
 
 
 ## permasalahan : 
 memprediksi Harga rumah(label) berdasarkan feature-feature dari dataset, seperti luas tanah, luas bangunan, jumlah kamar tidur, jumlah kamar mandi, dan keberadaan garasi agar bisa membuat machine learning dengan akurasi yang baik
+ - mencari model yang cocok untuk mempredisksi harga rumah berdasarkan dataset
+ - Dataset yang digunakan mungkin tidak mencakup semua fitur yang relevan untuk menentukan harga rumah. Hal ini dapat mempengaruhi kualitas prediksi model.
+ - terdapat perubahan harga pasar dari tahun ke tahun
+
 
 ## tujuan :  
-untuk memprediksi Harga rumah di jaksel berdasarkan feature-feature yang tersedia di dataset. dan mengoptimalkan model untuk mendapatkan performa terbaik dalam hal akurasi dan matriks evaluasi lainnya
+- mengidentifikasi feature-feature yang mempengaruhi harga rumah
+- untuk memprediksi Harga rumah di jaksel berdasarkan feature-feature yang tersedia di dataset. dan mengoptimalkan model untuk mendapatkan performa terbaik dalam hal akurasi dan matriks evaluasi lainnya
+- meningkatkan proses pengambilan keputusan
 
 ## Model :
 menggunakan model XGBoost Regressor (XGBRegressor), yaitu model yang menggunakan teknik boosting untuk membangun model prediksi dengan menggabungkan beberapa pohon keputusan (decision trees) secara bertahap. Setiap pohon keputusan yang baru dibangun berusaha memperbaiki kesalahan dari pohon keputusan sebelumnya.
@@ -32,6 +43,7 @@ Dataset harga rumah jaksel terdiri dari 7 kolom dengan jumlah data yaitu 1000 da
 ## EDA :
 ![Screenshot 2024-07-25 025517](https://github.com/user-attachments/assets/1b093581-cca6-4717-8e30-866401c203bd)
 
+![Screenshot 2024-07-25 050039](https://github.com/user-attachments/assets/1acfe0d3-b529-4b01-8c1a-6205762c797b)
 
 ![Screenshot 2024-07-25 033250](https://github.com/user-attachments/assets/598ecbd5-6ca8-4099-af30-9af00b0eb958)
 
@@ -43,6 +55,9 @@ Secara spesifik, XGBRegressor adalah implementasi dari algoritma XGBoost, yang b
 
 Jadi, XGBRegressor adalah decision tree yang digunakan dalam konteks boosting, dan lebih tepatnya, ia menggunakan teknik gradient boosting untuk menggabungkan banyak decision tree dalam satu model yang kuat.
 
+![Screenshot 2024-07-25 033250](https://github.com/user-attachments/assets/eaa9e1be-9390-4387-8bc8-22767c03cae7)
+
+
 
 ## performa model :
 hasil model
@@ -53,4 +68,5 @@ hasil model
  - MAE = 5.045983975064103
  
 ## kesimpulan : 
- hasil dari model machine learning XGBRegressor untuk memprediksi harga rumah di jaksel masih kurang baik. beberapa alasanya yaitu : kurang banyaknya feature-feature untuk memprediksi label agar lebih akurat dan butuh lebih banyak lagi data agar model bisa lebih akurat. 
+ hasil dari model machine learning XGBRegressor untuk memprediksi harga rumah di jaksel masih kurang baik. beberapa alasanya yaitu : kurang banyaknya feature-feature untuk memprediksi label agar lebih akurat, butuh lebih banyak lagi data agar model bisa lebih akurat dan mungkin ada model yang lebih baik dari xgbregressor dalam kasus ini.
+
