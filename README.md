@@ -3,10 +3,10 @@ nama : ENDRA AGUSTINO
 nim  : A11.2022.14614
 kelompok : A11.4412
 
-file projek prediksi harga rumah ada di folder /prediksi harga rumah di jaksel
+file projek prediksi harga rumah ada di folder /ML-A112214614-UAS
 
 ## ringkasan : 
-project prediksiHargaRumah ini bertujuan untuk memprediksi Harga rumah di jaksel berdasarkan dataset yang di ambil dari kagle menggunakan supervised learning yaitu model XGBRegressor, karena belum ada yang mencoba menggunakan model tersebut di kagglenya. Dataset yang digunakan mencakup fitur-fitur seperti luas tanah, luas bangunan, jumlah kamar tidur, jumlah kamar mandi, dan keberadaan garasi.
+project prediksiHargaRumah ini bertujuan untuk memprediksi Harga rumah di jaksel berdasarkan dataset yang di ambil dari kagle menggunakan supervised learning yaitu model XGBRegressor, karena belum ada yang mencoba menggunakan model tersebut di source kaggle tersebut. Dataset yang digunakan mencakup fitur-fitur seperti luas tanah, luas bangunan, jumlah kamar tidur, jumlah kamar mandi, dan keberadaan garasi.
 
 Data awal telah diproses dengan menghapus nilai yang tidak perlu, normalisasi harga, dan mengonversi fitur kategorikal.
 Setelah pemisahan data menjadi set pelatihan dan pengujian, model XGBRegressor awalnya menunjukkan hasil pelatihan yang baik tetapi mengalami overfitting, dengan skor pelatihan 0.9975 dan skor pengujian 0.3741. Untuk mengatasi masalah ini, dilakukan tuning hyperparameter menggunakan RandomizedSearchCV, dengan hasil parameter terbaik yang menunjukkan perbaikan dalam model. Meskipun ada peningkatan, model masih memerlukan evaluasi tambahan dan kemungkinan feature engineering untuk meningkatkan akurasi prediksi. Langkah selanjutnya melibatkan evaluasi lebih lanjut menggunakan metrik tambahan dan pengujian dengan data terbaru.
@@ -73,5 +73,5 @@ hasil model
  - MAE = 5.045983975064103
  
 ## kesimpulan : 
- hasil dari model machine learning XGBRegressor untuk memprediksi harga rumah di jaksel masih kurang baik. beberapa alasanya yaitu : kurang banyaknya feature-feature untuk memprediksi label agar lebih akurat, butuh lebih banyak lagi data agar model bisa lebih akurat dan mungkin ada model yang lebih baik dari xgbregressor dalam kasus ini.
+ hasil dari model machine learning XGBRegressor untuk memprediksi harga rumah di jaksel masih kurang baik. beberapa alasanya yaitu : kurang banyaknya feature-feature yang relevan untuk memprediksi label agar lebih akurat, butuh lebih banyak lagi data agar model bisa lebih akurat dan mungkin ada model yang lebih baik dari xgbregressor dalam kasus ini.
 
